@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+ <!-- Panels on swipe -->
+    <!-- Page 1 -->
+      <script>
+         $( document ).on( "pagecreate", "#page1", function() {
+            $( document ).on( "swipeleft swiperight", "#page1", function( e ) {
+               if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+                  if ( e.type === "swipeleft" ) {
+                     $( "#right-panel" ).panel( "open" );
+                  } else if ( e.type === "swiperight" ) {
+                     $( "#left-panel" ).panel( "open" );
+                  }
+               }
+            });
+         });
+      </script>
+
+      <!-- Page 2 -->
+      <script>
+         $( document ).on( "pagecreate", "#page2", function() {
+            $( document ).on( "swipeleft swiperight", "#page2", function( e ) {
+               if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+                  if ( e.type === "swipeleft" ) {
+                     $( "#right-panel" ).panel( "open" );
+                  } else if ( e.type === "swiperight" ) {
+                     $( "#left-panel" ).panel( "open" );
+                  }
+               }
+            });
+         });
+      </script>
+
+      
+      <script>
+         $( document ).on( "pagecreate", "#page3", function() {
+            $( document ).on( "swipeleft swiperight", "#page3", function( e ) {
+               if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+                  if ( e.type === "swipeleft" ) {
+                     $( "#right-panel" ).panel( "open" );
+                  } else if ( e.type === "swiperight" ) {
+                     $( "#left-panel" ).panel( "open" );
+                  }
+               }
+            });
+         });
+      </script>
+
+<script>
+         $( document ).on( "pagecreate", "#intro", function() {
+            $( document ).on( "swipeleft swiperight", "#intro", function( e ) {
+               if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+                  if ( e.type === "swipeleft" ) {
+                     $( "#right-panel" ).panel( "open" );
+                  } else if ( e.type === "swiperight" ) {
+                     $( "#left-panel" ).panel( "open" );
+                  }
+               }
+            });
+         });
+      </script>
+
+
+
+
+   </head>
+<body>
+
+<!-- Buttons of Book Image -->
+    <div data-role = "page" id = "book">
+        <!-- Header -->
+             <div data-role = "header" data-theme = "b">
+                <h2>Intresting Books</h2>               
+            </div>
+
+
+        <!-- Books link using Image -->
+        <div role = "main" class="ui-content">
+        <p align="center">
+
+            <!-- Grid - Line 1 -->
+            <a href="#intro">
+            <img border="0" alt="page1" src="3.jpg" width="200" height="200"></a>
+            &nbsp;
+
+            <a href="#intro">
+            <img border="0" alt="page2" src="2.jpg" width="200" height="200"></a>
+             &nbsp;
+
+             <a href="#intro">
+            <img border="0" alt="page3" src="1.jpg" width="200" height="200"></a>
+             &nbsp;
+
+             <br>
+
+            <!-- Grid - Line 2 -->
+             <a href="#intro">
+            <img border="0" alt="page1" src="4.jpg" width="200" height="200"></a>
+            &nbsp;
+
+            <a href="#intro">
+            <img border="0" alt="page2" src="5.jpg" width="200" height="200"></a>
+             &nbsp;
+
+             <a href="#intro">
+            <img border="0" alt="page3" src="6.jpg" width="200" height="200"></a>
+             &nbsp;
+
+             <br>
+
+             <!-- Grid - Line 3 -->
+             <a href="#intro">
+            <img border="0" alt="page1" src="7.jpg" width="200" height="200"></a>
+            &nbsp;
+
+            <a href="#intro">
+            <img border="0" alt="page2" src="8.jpg" width="200" height="200"></a>
+             &nbsp;
+
+             <a href="#intro">
+            <img border="0" alt="page3" src="9.jpg" width="200" height="200"></a>
+             &nbsp;
+
+        </p>
+        </div>
+
+        <!-- Footer -->
+         <div data-role = "footer">
+            <h4>Different Kinds Of Short Stories Books by Different Authors</h4>
+         </div>
+
+    </div>
+
+
+<div data-role="page" id="intro">
+
+<div data-role = "header" data-theme = "b">
+    <h2>Book Intro</h2>
+                <a href = "#left-panel" data-icon = "carat-r" data-iconpos = "notext"  
+               class = "ui-nodisc-icon">Open left panel</a> 
+</div>
+
+ <!-- Panel -->
+        <div data-role = "panel" id = "left-panel" data-theme = "b">
+                <p><h1>Book Menu</h1></p>
+            
+               
+        <!-- Books link using Image -->
+        <p align="center">
+            <!-- 1 to 3 pages (3)-->
+            <a href="#page1">
+            <img border="0" alt="page1" src="1.jpg" width="200" height="200"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="2.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="3.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+
+            <!-- 4 to 6 pages (3)-->
+            <a href="#page1">
+            <img border="0" alt="page1" src="4.jpg" width="200" height="200"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="5.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="6.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+
+             <!-- 7 to 9 pages (3)-->
+             <a href="#page1">
+            <img border="0" alt="page1" src="7.jpg" width="200" height="200"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="8.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="9.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+        </p>
+            <a href = "#" data-rel = "close" class = "ui-btn ui-btn-inline ui-icon-delete 
+               ui-btn-icon-left">Close Panel</a>
+
+        </div>
+
+ <div role = "main" class = "ui-content">
+    <a href="#page1">Begin Reading</a>
+</div>
+
+<div data-role = "footer">
+    <h2>BookS</h2>
+</div>
+
+</div>
+
+   <!-- Page 1 -->   
+<div data-role = "page" id = "page1">
+         <!-- Header -->
+         <div data-role = "header" data-theme = "b">
+            <h2>THE SUSPENSE BEGINS HERE</h2>
+            <a href = "#left-panel" data-icon = "carat-r" data-iconpos = "notext"  
+               class = "ui-nodisc-icon">Open left panel</a> 
+         </div>
+
+         <!-- Panel -->
+        <div data-role = "panel" id = "left-panel" data-theme = "b">
+                <p><h1>Book Menu</h1></p>
+            
+               
+        <!-- Books link using Image -->
+        <p align="center">
+            <!-- 1 to 3 pages (3)-->
+            <a href="#page1">
+            <img border="0" alt="page1" src="1.jpg" width="200" height="200"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="2.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="3.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+
+            <!-- 4 to 6 pages (3)-->
+            <a href="#page1">
+            <img border="0" alt="page1" src="4.jpg" width="200" height="200"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="5.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="6.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+
+             <!-- 7 to 9 pages (3)-->
+             <a href="#page1">
+            <img border="0" alt="page1" src="7.jpg" width="200" height="200"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="8.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="9.jpg" width="200" height="200"></a>
+             &nbsp;<br><br>
+        </p>
+            <a href = "#" data-rel = "close" class = "ui-btn ui-btn-inline ui-icon-delete 
+               ui-btn-icon-left">Close Panel</a>
+
+        </div>
+
+         <!-- Main -->         
+         <div role = "main" class = "ui-content">
+            <h1>Famous Authors</h1>
+            <p><address>
+A young boy sat by the river and cried. He cried there everyday because he wished he could sing but he couldn’t. 
+
+Far far away, over the rolling blue ocean the golden peacock flies. 
+
+The boy tries to sing but all that comes out is a croak. He puts his head in his hands and cries.
+
+The golden peacock flies over cities and towns. She sings as she flies and every place she flies over people sing along with her.
+
+The boy is sobbing as the golden peacock flies over the forest and lands beside him on the bank of the river. “Why are you crying?” She asks him. 
+“I’m crying because all I want is to be able to sing but every time I try all that comes out is a croak.”
+
+The golden peacock speaks to him gently. “I have traveled the world and have heard all of it’s singing, but the best song, I bring to you.” The little boy looks at her and asks “Will you sing it for me?” The golden peacock replies “It is a song that only you can sing.” The little boy cries in despair “But I cannot sing! Ever time I open my mouth to sing I only croak.” “Try one more time,” the golden peacock urges gently. The little boy finally agrees. He opens his mouth to sing expecting to hear the same horrible sound. The first note is weak and unsteady. The golden peacock encourages him to continue. With each note his voice becomes more sure and confident. At first the little boy cannot believe his ears. Is that really him singing? Now he sings stronger and in his voice is pure joy! In his excitement he jumps up and runs to his village so everyone can hear his new song. The golden peacock smiles to herself and the bird flies away. 
+
+From that day on, everywhere the boy went, he left joy and singing in his wake. 
+<br><br>
+
+     "There was once a family: a mother, a father and their only child, a son. They lived in a lovely country home and were very happy there. Everyday, the son would play outside and watch the birds sing across the sky. They lived a happy simple life. One day, not so different from all the others, the father came home from work. But on this day, the father had some very different news. They had to move to the city. This made the family very sad because they loved their home in the country but they had no choice so they packed their things and call for a truck"<br><br>
+
+     The next day, the boy and his bird went to the park as usual but this day would not be usual at all. He let her out of her cage and Goldie hopped onto the top or it. “The first thing you will need to do,” Goldie instructed, “is to stretch out your wings like this.” The boy watched her closely and then spread out his arms the way she had spread out her wings. “Then you want to stretch your neck up toward the sky like this.” He copied the way she stretched her neck. “Then all you need to do is give a little hop, flap your wings and away you fly!” She did each step as she explained it to him and off she soared into the sky. The boy concentrated hard to make sure that he copied her precisely but when he hopped and flapped his arms nothing happened. Goldie flew back to him and asked what happened. “I did exactly what you said but nothing happened.” “Flying doesn’t happen on it’s own,” Goldie said, “It takes work. If you flap your wings and hop, that’s a good start but that’s all it is. Try again but this time don’t stop with the first hop. Use your wings to push the air down and you up.” 
+So the little boy tried again and this time he remembered to keep trying after the first hop. 
+<br><br>
+
+     One morning the busy doctor invited Sue into the hallway with a shaggy, grey eyebrow.<br><br>
+
+     "She has one chance in - let us say, ten," he said, as he shook down the mercury in his clinical thermometer. " And that chance is for her to want to live. This way people have of lining-u on the side of the undertaker makes the entire pharmacopoeia look silly. Your little lady has made up her mind that she's not going to get well. Has she anything on her mind?"</address></p>
+           
+           <!-- Buttons -->
+            <p> Go to next page: &nbsp;<a href = "#page2" data-transition = "slidedown" class="ui-btn ui-icon-home ui-btn-icon-left ui-corner-all ui-shadow ui-overlay-shadow ui-shadow-icon ui-btn-inline ui-nodisc-icon ui-alt-icon">Next Page</a>
+            </p>
+         </div>
+
+         <!-- Footer -->
+         <div data-role = "footer">
+            <h4>Short Stories By Famous Authors</h4>
+         </div>
+      </div>
+
+<!-- Page 2 -->
+      <div id = "page2" data-role = "page"  data-close-btn = "none" data-corners = "false" data-overlay-theme = "b">
+
+        <!-- Header -->
+         <div data-role = "header" data-theme = "b">
+            <h2>Interesting Story</h2>
+            <a href = "#left-panel" data-icon = "carat-r" data-iconpos = "notext"  
+               class = "ui-nodisc-icon">Open left panel</a> 
+         </div>
+
+         <!-- Panel -->
+        <div data-role = "panel" id = "left-panel" data-theme = "b">
+                <p><h1>Book Menu</h1></p>
+            
+               
+        <p align="center">
+            <!-- 1 to 3 pages (3)-->
+            <a href="#page1">
+            <img border="0" alt="page1" src="1.jpg" width="100" height="100"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="book2.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="book3.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+
+            <!-- 4 to 6 pages (3)-->
+            <a href="#page1">
+            <img border="0" alt="page1" src="book4.jpg" width="100" height="100"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="book5.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="book6.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+
+             <!-- 7 to 9 pages (3)-->
+             <a href="#page1">
+            <img border="0" alt="page1" src="book7.jpg" width="100" height="100"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="book8.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="book9.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+        </p>
+            <a href = "#" data-rel = "close" class = "ui-btn ui-btn-inline ui-icon-delete 
+               ui-btn-icon-left">Close Panel</a>
+
+        </div>
+         
+         <!-- Main -->
+         <div role = "main" class = "ui-content">
+            <h1>Page 2</h1>
+            <p><address>  "She - she wanted to paint the Bay of Naples some day." said Sue.<br><br>
+
+     "Paint? - bosh! Has she anything on her mind worth thinking twice - a man for instance?"<br><br>
+
+     "A man?" said Sue, with a jew's-harp twang in her voice. "Is a man worth - but, no, doctor; there is nothing of the kind."<br><br>
+
+     "Well, it is the weakness, then," said the doctor. "I will do all that science, so far as it may filter through my efforts, can accomplish. But whenever my patient begins to count the carriages in her funeral procession I subtract 50 per cent from the curative power of medicines. If you will get her to ask one question about the new winter styles in cloak sleeves I will promise you a one-in-five chance for her, instead of one in ten."<br><br>
+
+     After the doctor had gone Sue went into the workroom and cried a Japanese napkin to a pulp. Then she swaggered into Johnsy's room with her drawing board, whistling ragtime.<br><br>
+
+     Johnsy lay, scarcely making a ripple under the bedclothes, with her face toward the window. Sue stopped whistling, thinking she was asleep.<br><br>
+
+     She arranged her board and began a pen-and-ink drawing to illustrate a magazine story. Young artists must pave their way to Art by drawing pictures for magazine stories that young authors write to pave their way to Literature.<br><br>
+
+     As Sue was sketching a pair of elegant horseshow riding trousers and a monocle of the figure of the hero, an Idaho cowboy, she heard a low sound, several times repeated. She went quickly to the bedside.<br><br>
+
+     Johnsy's eyes were open wide. She was looking out the window and counting - counting backward.<br><br>
+
+     "Twelve," she said, and little later "eleven"; and then "ten," and "nine"; and then "eight" and "seven", almost together.<br><br>
+
+     Sue look solicitously out of the window. What was there to count? There was only a bare, dreary yard to be seen, and the blank side of the brick house twenty feet away. An old, old ivy vine, gnarled and decayed at the roots, climbed half way up the brick wall. The cold breath of autumn had stricken its leaves from the vine until its skeleton branches clung, almost bare, to the crumbling bricks.</p>
+            
+            </address></p></div>
+            <!-- Buttons -->
+            <div class="ui-grid-b">
+            <p>
+              <div class="ui-block-a">
+                 <a href = "#page1" data-transition = "flip" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-shadow-icon ui-btn-inline"></a>
+             </div>
+
+             <div class="ui-block-b">
+               <a href = "#page1" data-transition = "slideup" class="ui-btn ui-icon-home ui-btn-icon-left ui-alt-icon ui-alt-icon-inline"></a>
+             </div>
+
+             <div class="ui-block-c">
+                 <a href = "#page3" data-transition = "flip" class="ui-btn ui-icon-arrow-r ui-btn-icon-left ui-shadow-icon ui-btn-inline"></a>
+              </div>
+            </p>
+         
+         </div>
+         
+         <br>
+         <!-- Footer -->
+         <div data-role = "footer">
+            <h4>Short Story with Big Meaning</h4>
+         </div>
+      </div>
+
+
+
+<!-- Page 3 -->
+      <div id = "page3" data-role = "page"  data-close-btn = "none" data-corners = "false" data-overlay-theme = "b">
+
+        <!-- Header -->
+         <div data-role = "header" data-theme = "b">
+            <h2>Story</h2>
+            <a href = "#left-panel" data-icon = "carat-r" data-iconpos = "notext"  
+               class = "ui-nodisc-icon">Open left panel</a> 
+         </div>
+
+         <!-- Panel -->
+        <div data-role = "panel" id = "left-panel" data-theme = "b">
+                <p><h1>Book Menu</h1></p>
+            
+                
+                -->
+        <!-- Books link using Image -->
+        <p align="center">
+            <!-- 1 to 3 pages (3)-->
+            <a href="#page1">
+            <img border="0" alt="page1" src="the_last_leaf.jpg" width="100" height="100"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="book2.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="book3.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+
+            <!-- 4 to 6 pages (3)-->
+            <a href="#page1">
+            <img border="0" alt="page1" src="book4.jpg" width="100" height="100"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="book5.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="book6.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+
+             <!-- 7 to 9 pages (3)-->
+             <a href="#page1">
+            <img border="0" alt="page1" src="book7.jpg" width="100" height="100"></a>
+            &nbsp;<br><br>
+
+            <a href="#page2">
+            <img border="0" alt="page2" src="book8.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+
+             <a href="#page3">
+            <img border="0" alt="page3" src="book9.jpg" width="100" height="100"></a>
+             &nbsp;<br><br>
+        </p>
+            <a href = "#" data-rel = "close" class = "ui-btn ui-btn-inline ui-icon-delete 
+               ui-btn-icon-left">Close Panel</a>
+
+        </div>
+         
+         <!-- Main -->
+         <div role = "main" class = "ui-content">
+            <h1>Page 3</h1>
+            <p><address> "What is it, dear?" asked Sue.<br><br>
+
+     "Six," said Johnsy, in almost a whisper. "They're falling faster now. Three days ago there were almost a hundred. It made my head ache to count them. But now it's easy. There goes another one. There are only five left now."<br><br>
+
+     "Five what, dear? Tell your Sudie."<br><br>
+
+     "Leaves. On the ivy vine. When the last one falls I must go, too. I've known that for three days. Didn't the doctor tell you?"<br><br>
+
+     "Oh, I never heard of such nonsense," complained Sue, with magnificent scorn. "What have old ivy leaves to do with your getting well? And you used to love that vine so, you naughty girl. Don't be a goosey. Why, the doctor told me this morning that your chances for getting well real soon were - let's see exactly what he said - he said the chances were ten to one! Why, that's almost as good a chance as we have in New York when we ride on the street cars or walk past a new building. Try to take some broth now, and let Sudie go back to her drawing, so she can sell the editor man with it, and buy port wine for her sick child, and pork chops for her greedy self."<br><br>
+
+     "You needn't get any more wine," said Johnsy, keeping her eyes fixed out the window. "There goes another. No, I don't want any broth. That leaves just four. I want to see the last one fall before it gets dark. Then I'll go, too."<br><br>
+
+     "Johnsy, dear," said Sue, bending over her, "will you promise me to keep your eyes closed, and not look out the window until I am done working? I must hand those drawings in by to-morrow. I need the light, or I would draw the shade down."<br><br>
+
+     "Couldn't you draw in the other room?" asked Johnsy, coldly.<br><br>
+
+     "I'd rather be here by you," said Sue. "Beside, I don't want you to keep looking at those silly ivy leaves."</p>
+            
+            
+            <p>
+               <a href = "#page2" data-transition = "flip" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-corner-all ui-shadow ui-overlay-shadow ui-shadow-icon ui-btn-inline ui-nodisc-icon ui-alt-icon">Back</a>
+
+                <a href = "#page1" data-transition = "slideup" class="ui-btn ui-icon-delete ui-btn-icon-left ui-corner-all ui-shadow ui-overlay-shadow ui-shadow-icon ui-btn-inline ui-nodisc-icon ui-alt-icon">Close Book</a>
+          </p>
+
+         </div>
+         
+         
+         <div data-role = "footer">
+            <h4>Short Story but  Means A lot</h4>
+         </div>
+      </div>
+
+   </body>
+</html>
